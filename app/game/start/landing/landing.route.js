@@ -1,7 +1,7 @@
 export default ($stateProvider) => {
 	$stateProvider
 		.state('start.landing', {
-			url: '/welcome',
+			url: '/start',
 			templateUrl: require('./landing.html'),
 			controller: function() {
 			}

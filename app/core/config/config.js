@@ -10,10 +10,10 @@ export default ngModule => {
 		$locationProvider.html5Mode(true);
 
 		// for any unmatched url, send to 404 page (Not page found)
-		$urlRouterProvider.otherwise('/');
+		$urlRouterProvider.otherwise('/game/start');
 
 		// the `when` method says if the url is `/` redirect to `/dashboard` what is basically our `home` for this
 		// application
-		$urlRouterProvider.when('/', '/');
+		$urlRouterProvider.when('/', '/game/start');
 	});
 };

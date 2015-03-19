@@ -1,11 +1,6 @@
-'use strict';
-
-var title = 'Angulaire';
-
 class NavbarCtrl {
 	constructor() {
-		this.navbarItems = require('./menu').navbar.in;
-		this.title = title;
+		this.title = 'Angulaire';
 	}
 }
 
