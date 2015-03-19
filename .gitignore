@@ -1,0 +1,8 @@
+node_modules
+app/bower_components
+dist
+
+npm-debug.log
+
+# IDE
+.idea/

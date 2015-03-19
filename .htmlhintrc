@@ -1,0 +1,17 @@
+{
+  "tag-pair": true,
+  "tag-pair-self-close": false,
+  "doctype-first": false,
+  "attr-lowercase": true,
+  "attr-no-duplication": true,
+  "attr-value-double-quotes": true,
+  "attr-value-not-empty": false,
+  "spec-char-escape": true,
+  "attr-unsafe-chars": true,
+  "href-abs-or-rel": true,
+  "tagname-lowercase": true,
+  "src-not-empty": true,
+  "id-unique": true,
+  "head-script-disabled": true,
+  "img-alt-require": false
+}

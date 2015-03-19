@@ -1,0 +1,19 @@
+<div>
+  <h1>Who Wants to be an Angulaire?</h1>
+
+  <div>
+    <h3>Select a Language</h3>
+
+    <p>Selected: {{vm.language.selected.name || 'none'}}</p>
+    <ui-select ng-model="vm.language.selected" theme="select2" style="width: 300px;">
+      <ui-select-match placeholder="Select a language">{{$select.selected.name}}</ui-select-match>
+      <ui-select-choices repeat="lang in vm.languages | filter: $select.search">
+        <span ng-bind-html="lang.name | highlight: $select.search"></span>
+        <small ng-bind-html="lang.sub | highlight: $select.search"></small>
+      </ui-select-choices>
+    </ui-select>
+    <br>
+    <button class="btn btn-hero btn-lg" ng-click="vm.submit()">Start</button>
+
+  </div>
+</div>

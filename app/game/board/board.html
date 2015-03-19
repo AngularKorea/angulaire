@@ -1,0 +1,9 @@
+<div>
+  <ul class="game-board-content">
+    <li ng-class="{highlight: vm.current === $index }"
+        ng-repeat="level in vm.levels track by $index">
+      <span>{{level.count}}</span>
+      <span>{{level.score}}</span>
+    </li>
+  </ul>
+</div>

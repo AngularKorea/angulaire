@@ -1,0 +1,39 @@
+<div class="game">
+
+  <div class="left">
+    <div class="game-question-box">
+      <span>Question #{{vm.current + 1}}</span>
+      <game-question question="vm.getQuestion()"></game-question>
+    </div>
+
+    <div class="game-answers-box">
+      <div class="game-answers">
+        <game-answers answers="vm.getAnswers()" selected="vm.selected"></game-answers>
+      </div>
+
+      <div class="game-lifelines">
+        <ask-audience-lifeline></ask-audience-lifeline>
+        <fifty-fifty-lifeline></fifty-fifty-lifeline>
+        <phone-friend-lifeline></phone-friend-lifeline>
+      </div>
+
+      <div class="game-submit">
+        <final-answer></final-answer>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="game-score">
+      <h1>Bank</h1>
+    </div>
+
+    <div class="game-board">
+      <game-board current="vm.current" total="{{::vm.rounds}}"></game-board>
+    </div>
+  </div>
+
+</div>
+
+
+
