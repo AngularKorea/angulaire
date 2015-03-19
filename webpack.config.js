@@ -4,8 +4,11 @@ var webpack = require('webpack'),
 	path = require('path');
 
 module.exports = {
+	cache: true,
 	context: __dirname + '/app',
-	entry: './index.js',
+	entry: [
+		'./index.js'
+	],
 	output: {
 		path: __dirname + '/app',
 		filename: 'bundle.js'
@@ -24,10 +27,6 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.js$/,
-				loader: 'ng-annotate!babel!jshint',
-				exclude: /node_modules|dist|bower_components/
-			}, {
 				test: /\.html$/,
 				loader: 'raw'
 			}, {
@@ -40,11 +39,28 @@ module.exports = {
 				test: /\.css$/,
 				loader: 'style!css!postcss'
 			}, {
-				test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$/,
+				test: /\.jpe?g$|\.gif$|\.png$/,
 				loader: "file"
 			}, {
-				test: /\.(woff|woff2|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-				loader: 'file-loader?name=res/[name].[ext]?[hash]'
+				/* remaining tasks help load bootstrap */
+				test: /bootstrap\/js\//,
+				loader: 'imports?jQuery=jquery'
+			}, {
+				test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+				loader: "url?limit=10000&minetype=application/font-woff"
+			}, {
+				test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+				loader: "url?limit=10000&minetype=application/octet-stream"
+			}, {
+				test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+				loader: "file"
+			}, {
+				test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+				loader: "url?limit=10000&minetype=image/svg+xml"
+			}, {
+				test: /\.js$/,
+				loader: 'ng-annotate!babel!jshint',
+				exclude: /node_modules|dist|bower_components/
 			}
 		]
 	},
@@ -53,6 +69,5 @@ module.exports = {
 		require('autoprefixer-core'),
 		require('csswring')
 	],
-	plugins: [
-	]
+	plugins: []
 };
