@@ -1,9 +1,12 @@
-# Angular game
+# Angular Game
 
+### Who wants to be an Angulaire?
+
+10 questions to test your knowledge and help introduce AngularJS.
 
 ## Development
 
-* Setup: `npm install && bower install`
+* Setup: `npm install`
 * Start: `npm start`
 * Browser: `localhost:8080`
 
