@@ -1,15 +1,10 @@
 class GameCtrl {
-	constructor($state, gameData, gameSettings) {
+	constructor($state, gameData, gameSettings, AnswersService) {
 		this.$state = $state;
 		this.data = gameData;
-		this.current = 0;
-		this.selected = null;
 		this.rounds = gameSettings.rounds;
-	}
-
-	select(index) {
-		this.selected = index;
-		console.log(index);
+		this.current = 0;
+		this.selected = AnswersService.selected;
 	}
 
 	getAnswers() {
@@ -32,6 +27,6 @@ class GameCtrl {
 		}
 	}
 }
-GameCtrl.$inject = ['$state', 'gameData', 'gameSettings'];
+GameCtrl.$inject = ['$state', 'gameData', 'gameSettings', 'AnswersService'];
 
 export default GameCtrl;

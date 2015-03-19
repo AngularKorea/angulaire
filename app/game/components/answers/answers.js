@@ -2,8 +2,7 @@ export default () => {
 	require('./answers.scss');
 	return {
 		scope: {
-			answers: '=',
-			selected: '='
+			answers: '='
 		},
 		template: require('./answers.html'),
 		bindToController: true,
