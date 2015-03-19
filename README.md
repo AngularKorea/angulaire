@@ -1,4 +1,6 @@
-# Angular Game   WIP
+# Angular Game
+
+# WIP (Work in Progress)
 
 ### Who wants to be an Angulaire?
 

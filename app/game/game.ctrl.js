@@ -13,12 +13,11 @@ class GameCtrl {
 	}
 
 	getAnswers() {
-		return this.data[vm.current].answers;
+		return this.data[this.current].answers;
 	}
 
 	getQuestion() {
-		console.log(this.data);
-		//return this.data[vm.current].question;
+		return this.data[this.current].question;
 	}
 
 	submit() {
