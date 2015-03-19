@@ -11,7 +11,7 @@ export default () => {
 		scope: {
 			question: '='
 		},
-		templateUrl: require('./question.html'),
+		template: require('./question.html'),
 		bindToController: true,
 		controllerAs: 'vm',
 		controller: QuestionCtrl

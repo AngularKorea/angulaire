@@ -6,12 +6,12 @@ var ngModule = angular.module('app', [
 	'ngAnimate',
 	'ngTouch',
 	'ngSanitize',
-
 	/* 3rd Party */
 	'ui.router',
-
+	'ui.select',
 	/* custom */
-	require('./game/game').name
+	require('./game/game').name,
+	require('./pages/pages').name
 ]);
 
 require('./core/core')(ngModule);

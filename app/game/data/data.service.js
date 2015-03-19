@@ -1,14 +1,12 @@
 /* Google Spreadsheet as a backend database. Why? I ask, why not? */
 
-var spreadsheet = "1fOaLreeBZyIk0X3q22eJkL4ZKGIp0SyyJkwaI750CkY";
-
-class dataService {
-	constructor($http) {
-		this.$http = $http;
-	}
-
-	get() {
-		return this.$http({
+export default ($http) => {
+	var spreadsheet = "1fOaLreeBZyIk0X3q22eJkL4ZKGIp0SyyJkwaI750CkY";
+	return {
+		get: get
+	};
+	function get() {
+		return $http({
 			url: `https://spreadsheets.google.com/feeds/list/${spreadsheet}/od6/public/values?alt=json`,
 			method: "GET"
 		}).then((response) => {
@@ -45,7 +43,4 @@ class dataService {
 			console.error('Error loading data.', error);
 		})
 	}
-}
-dataService.$inject = ['$http'];
-
-export default dataService;
+};

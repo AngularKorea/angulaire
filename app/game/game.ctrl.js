@@ -17,7 +17,8 @@ class GameCtrl {
 	}
 
 	getQuestion() {
-		return this.data[vm.current].question;
+		console.log(this.data);
+		//return this.data[vm.current].question;
 	}
 
 	submit() {

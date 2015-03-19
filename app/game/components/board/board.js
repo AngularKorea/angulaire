@@ -22,7 +22,7 @@ export default () => {
 			current: '=',
 			total: '@'
 		},
-		templateUrl: require('./board.html'),
+		template: require('./board.html'),
 		bindToController: true,
 		controllerAs: 'vm',
 		controller: BoardCtrl

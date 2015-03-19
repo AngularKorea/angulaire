@@ -5,9 +5,9 @@ export default () => {
 			answers: '=',
 			selected: '='
 		},
-		templateUrl: require('./answers.html'),
+		template: require('./answers.html'),
 		bindToController: true,
 		controllerAs: 'vm',
-		controller: require('./answers.ctrl')
+		controller: require('./answers.ctrl.js')
 	};
 };
