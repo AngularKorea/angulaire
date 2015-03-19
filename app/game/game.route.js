@@ -7,7 +7,7 @@ export default ($stateProvider) => {
 			controller: require('./game.ctrl'),
 			resolve: {
 				gameData: function(dataService) {
-					return dataService.get();
+					return dataService.load();
 				}
 			}
 		});

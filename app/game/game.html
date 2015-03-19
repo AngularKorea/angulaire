@@ -18,8 +18,10 @@
 					<!--<phone-friend-lifeline></phone-friend-lifeline>-->
 				</div>
 
-				<div class="col-md-12">
-					<final-answer submit="vm.submit()"></final-answer>
+				Selected: {{vm.selected}}
+
+				<div class="col-md-12" ng-show="vm.selected">
+					<final-answer></final-answer>
 				</div>
 
 
