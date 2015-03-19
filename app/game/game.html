@@ -1,41 +1,37 @@
 <div id="game">
 
-  <div class="column">
-    <div class="col-md-8">
-      <span>Question #{{vm.current + 1}}</span>
-      <game-question question="vm.getQuestion()"></game-question>
-    </div>
+	<div class="column">
+		<div class="col-md-8">
+			<span>Question #{{vm.current + 1}}</span>
+			<game-question question="vm.getQuestion()"></game-question>
+		</div>
 
-    <div class="col-md-8">
-      <div class="row">
-	      <div class="col-md-8">
-        <game-answers answers="vm.getAnswers()" selected="vm.selected"></game-answers>
-	      </div>
+		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-12">
+					<game-answers answers="vm.getAnswers()" selected="vm.selected"></game-answers>
+				</div>
 
-      <div class="game-lifelines">
-        <!--<ask-audience-lifeline></ask-audience-lifeline>-->
-        <!--<fifty-fifty-lifeline></fifty-fifty-lifeline>-->
-        <!--<phone-friend-lifeline></phone-friend-lifeline>-->
-      </div>
+				<div class="col-md-12">
+					<!--<ask-audience-lifeline></ask-audience-lifeline>-->
+					<!--<fifty-fifty-lifeline></fifty-fifty-lifeline>-->
+					<!--<phone-friend-lifeline></phone-friend-lifeline>-->
+				</div>
 
-      <div class="game-submit">
-        <final-answer></final-answer>
-      </div>
-      </div>
-    </div>
-  </div>
+				<div class="col-md-12">
+					<final-answer></final-answer>
+				</div>
 
-  <div class="column">
-    <div class="col-md-4">
-      <!--<h1>Bank</h1>-->
-    </div>
 
-    <div class="col-md-4">
-      <game-board current="vm.current" total="{{::vm.rounds}}"></game-board>
-    </div>
-  </div>
+			</div>
+		</div>
+	</div>
 
+	<div class="column">
+		<div class="col-md-4">
+			<game-board current="vm.current" total="{{::vm.rounds}}"></game-board>
+		</div>
+	</div>
 </div>
-
 
 

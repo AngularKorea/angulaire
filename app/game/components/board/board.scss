@@ -2,12 +2,10 @@
   background-color: red;
 }
 
-.game-board-content {
-	background-color: darkblue;
-}
-
 .game-board-content li {
   display: block;
+	background-color: darkblue;
+	font-size: 1.5em;
   color: white;
   text-decoration: none;
   padding: 10px 15px 10px 30px;
