@@ -1,5 +1,12 @@
-<div ng-if="vm.answerSelected">
-	<answer-status></answer-status>
+<div ng-if="vm.Game.submitted">
+	<div>
+		<div ng-if="vm.Game.correct">
+			<h3>Correct!</h3>
+		</div>
+		<div ng-if="!vm.Game.correct">
+			<h3>Oops.</h3>
+		</div>
+	</div>
 	<button ng-click="vm.next()" class="btn btn-primary">Next Question<span
 		class="glyphicon glyphicon-ok-circle"></span></button>
 </div>

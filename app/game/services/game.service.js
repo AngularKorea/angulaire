@@ -12,6 +12,7 @@ class GameService {
 		this.selected = null;
 		this.correct = null;
 		this.current = 0;
+		this.submitted = false;
 	}
 
 	load(data) {
@@ -30,15 +31,18 @@ class GameService {
 		return this.selected === index;
 	}
 
-	correctResponse() {
+	isCorrect(index) {
+		this.submitted = true;
+		var options = ['gsx$a', 'gsx$b', 'gsx$c', 'gsx$d']; // google spreadsheets are terrible.
+		this.correct = this.data[this.current][options[index]]['$t'] === 'TRUE';
+		console.log(`submitted: ${this.submitted}`);
+		console.log(`correct: ${this.correct}`);
 		return this.correct;
 	}
 
-	isCorrect(index) {
-		var options = ['gsx$a', 'gsx$b', 'gsx$c', 'gsx$d']; // google spreadsheets are terrible.
-		var correct = this.data[this.current][options[index]]['$t'] === 'TRUE';
-		console.log(correct);
-		return correct;
+	isSubmitted() {
+		console.log(`isSubmitted: ${this.submitted}`);
+		return this.submitted;
 	}
 
 	nextQuestion() {
@@ -50,6 +54,7 @@ class GameService {
 			this.current += 1;
 			// reset selected
 			this.selected = null;
+			this.submitted = false;
 			this.correct = null;
 		}
 

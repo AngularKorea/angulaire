@@ -1,6 +1,6 @@
 class FinalAnswerCtrl {
 	constructor(GameService) {
-		this.answerSelected = GameService.selected;
+		this.Game = GameService;
 		this.next = GameService.nextQuestion;
 	}
 }
