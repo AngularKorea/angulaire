@@ -1,4 +1,4 @@
-class AnswerResponseCtrl {
+class AnswerStatusCtrl {
 	constructor(GameService) {
 		this.GameService = GameService;
 	}
@@ -7,12 +7,12 @@ class AnswerResponseCtrl {
 		return this.GameService.correctResponse();
 	}
 }
-AnswerResponseCtrl.$inject = ['GameService'];
+AnswerStatusCtrl.$inject = ['GameService'];
 
 export default () => {
 	return {
-		template: require('./answerResponse.html'),
+		template: require('./answerStatus.html'),
 		controllerAs: 'vm',
-		controller: AnswerResponseCtrl
+		controller: AnswerStatusCtrl
 	};
 };

@@ -1,8 +1,8 @@
 export default () => {
 	return {
 		scope: {
-			name: '@'
-			//action: '&'
+			name: '@',
+			action: '&'
 		},
 		template: require('./lifeline.html'),
 		controllerAs: 'vm',

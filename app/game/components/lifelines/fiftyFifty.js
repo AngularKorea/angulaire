@@ -1,10 +1,12 @@
 export default () => {
 	return {
-		template: '<life-line name="50/50"></life-line>',
+		template: '<life-line name="50/50" action="vm.removeTwoChoices()"></life-line>',
 		controllerAs: 'vm',
 		controller: function() {
 			var vm = this;
-			// remove 2 choices
+			vm.removeTwoChoices = () => {
+				console.log('remove two choices.');
+			}
 		}
 	};
 };

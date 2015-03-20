@@ -1,13 +1,9 @@
 class GameCtrl {
-	constructor($state, gameData, SettingsService, AnswerService, $rootScope) {
+	constructor($state, gameData, GameService) {
 		this.$state = $state;
 		this.data = gameData;
-		this.rounds = SettingsService.rounds;
-		this.current = 0;
-		this.selected = AnswerService.selected;
-		$rootScope.$on('select', function() {
-			this.selected = AnswerService.selected;
-		})
+		this.current = GameService.current;
+		this.selected = GameService.selected;
 	}
 
 	getAnswers() {
@@ -17,8 +13,7 @@ class GameCtrl {
 	getQuestion() {
 		return this.data[this.current].question;
 	}
-
 }
-GameCtrl.$inject = ['$state', 'gameData', 'SettingsService', 'AnswerService', '$rootScope'];
+GameCtrl.$inject = ['$state', 'gameData', 'GameService'];
 
 export default GameCtrl;

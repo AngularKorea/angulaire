@@ -7,5 +7,6 @@ export default angular.module('app.game', [])
 	.directive('gameQuestion', require('./components/question/question'))
 	.directive('gameBoard', require('./components/board/board'))
 	.directive('gameAnswers', require('./components/answers/answers'))
-	.directive('finalAnswer', require('./components/answers/finalAnswer'));
+	.directive('finalAnswer', require('./components/submit/finalAnswer'))
+.directive('answerResponse', require('./components/submit/answerStatus'));
 
