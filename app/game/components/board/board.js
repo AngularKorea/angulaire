@@ -1,8 +1,8 @@
 class BoardCtrl {
 	constructor(GameService, SettingsService) {
-		this.current = GameService.current;
+		this.Game = GameService;
 		this.total = SettingsService.rounds;
-		this.levels = [];
+		this.points = [];
 
 		/* generate game board values. For example 2:  500 */
 		var total = 6000;
@@ -12,11 +12,11 @@ class BoardCtrl {
 			} else {
 				total -= (i * 100);
 			}
-			this.levels.push({
-				count: i,
-				score: total
-			});
+			this.points.push(total);
 		}
+	}
+	current (index) {
+		return this.total - index;
 	}
 }
 BoardCtrl.$inject = ['GameService', 'SettingsService'];

@@ -1,7 +1,3 @@
-.highlight {
-  background-color: red;
-}
-
 .game-board-content li {
   display: block;
 	background-color: darkblue;
@@ -13,3 +9,6 @@
   border: solid yellow 3px;
 }
 
+.game-board-content .highlight {
+	background-color: red;
+}
