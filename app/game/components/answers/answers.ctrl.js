@@ -2,7 +2,10 @@ class AnswersCtrl {
 	constructor(SettingsService, GameService) {
 		this.languages = SettingsService.getLanguage();
 		this.isSelected = GameService.isSelected;
-		this.select = GameService.selectAnswer;
+		this.selectAnswer = (index) => {
+			GameService.selected = index;
+			GameService.isCorrect(index);
+		}
 	}
 
 }

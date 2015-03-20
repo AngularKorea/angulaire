@@ -3,7 +3,7 @@
     <button type="button"
             class="btn btn-primary btn-lg btn-block choice"
             ng-class="{active: vm.isSelected($index)}"
-            ng-click="vm.select($index)">
+            ng-click="vm.selectAnswer($index)">
       <span ng-repeat="lang in vm.languages" class="answer">{{answer[lang]}}</span>
     </button>
   </div>

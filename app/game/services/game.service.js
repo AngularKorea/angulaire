@@ -34,13 +34,11 @@ class GameService {
 		return this.correct;
 	}
 
-	selectAnswer(index) {
-		this.selected = index;
-		this.correct = this.isCorrect(index, this.current);
-	}
-
-	isCorrect(index, current) {
-		return this.data[current].answers[index].isCorrect === 'TRUE';
+	isCorrect(index) {
+		var options = ['gsx$a', 'gsx$b', 'gsx$c', 'gsx$d']; // google spreadsheets are terrible.
+		var correct = this.data[this.current][options[index]]['$t'] === 'TRUE';
+		console.log(correct);
+		return correct;
 	}
 
 	nextQuestion() {
