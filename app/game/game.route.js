@@ -6,8 +6,8 @@ export default ($stateProvider) => {
 			controllerAs: 'vm',
 			controller: require('./game.ctrl'),
 			resolve: {
-				gameData: function(dataService) {
-					return dataService.load();
+				gameData: function(DataService) {
+					return DataService.get();
 				}
 			}
 		});

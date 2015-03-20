@@ -1,9 +1,9 @@
 class QuestionCtrl {
-	constructor(gameSettings) {
-		this.languages = gameSettings.getLanguage();
+	constructor(SettingsService) {
+		this.languages = SettingsService.getLanguage();
 	}
 }
-QuestionCtrl.$inject = ['gameSettings'];
+QuestionCtrl.$inject = ['SettingsService'];
 
 export default () => {
 	require('./question.scss');

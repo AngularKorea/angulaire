@@ -1,11 +1,11 @@
 class AnswersCtrl {
-	constructor(gameSettings, AnswerService) {
-		this.languages = gameSettings.getLanguage();
+	constructor(SettingsService, AnswerService) {
+		this.languages = SettingsService.getLanguage();
 		this.isSelected = AnswerService.isSelected;
 		this.select = AnswerService.selectAnswer;
 	}
 
 }
-AnswersCtrl.$inject = ['gameSettings', 'AnswerService'];
+AnswersCtrl.$inject = ['SettingsService', 'AnswerService'];
 
 export default AnswersCtrl;

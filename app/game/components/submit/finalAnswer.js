@@ -1,9 +1,10 @@
 class FinalAnswerCtrl {
-	constructor() {
-		//this.checkAnswer = CheckAnswerService.checkAnswer;
+	constructor(GameService) {
+		this.answerSelected = GameService.selected;
+		this.next = GameService.nextQuestion;
 	}
 }
-FinalAnswerCtrl.$inject = [];
+FinalAnswerCtrl.$inject = ['GameService'];
 
 export default () => {
 	return {
