@@ -1,7 +1,6 @@
 export default angular.module('app.game', [])
 	.config(require('./game.route'))
 	.service('DataService', require('./services/data.service'))
-	.service('AnswerService', require('./services/answer.service'))
 	.service('SettingsService', require('./services/settings.service'))
 	.service('GameService', require('./services/game.service'))
 	.directive('gameQuestion', require('./components/question/question'))

@@ -4,15 +4,10 @@ class GameCtrl {
 		this.data = gameData;
 		this.current = GameService.current;
 		this.selected = GameService.selected;
+		this.getAnswers = GameService.getAnswers;
+		this.getQuestion = GameService.getQuestion;
 	}
 
-	getAnswers() {
-		return this.data[this.current].answers;
-	}
-
-	getQuestion() {
-		return this.data[this.current].question;
-	}
 }
 GameCtrl.$inject = ['$state', 'gameData', 'GameService'];
 

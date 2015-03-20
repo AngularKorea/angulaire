@@ -18,6 +18,14 @@ class GameService {
 		this.data = data;
 	}
 
+	getAnswers() {
+		return this.data[this.current].answers;
+	}
+
+	getQuestion() {
+		return this.data[this.current].question;
+	}
+
 	isSelected(index) {
 		return this.selected === index;
 	}
