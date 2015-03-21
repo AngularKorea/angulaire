@@ -6,7 +6,7 @@ class AnswersCtrl {
 		this.selectAnswer = (index) => {
 			GameService.selected = index;
 			GameService.isCorrect(index);
-		}
+		};
 	}
 
 }

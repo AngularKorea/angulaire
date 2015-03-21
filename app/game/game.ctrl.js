@@ -1,11 +1,7 @@
 class GameCtrl {
-	constructor($state, gameData, GameService) {
-		this.$state = $state;
-		this.data = gameData;
-		this.Game = GameService;
+	constructor() {
 	}
-
 }
-GameCtrl.$inject = ['$state', 'gameData', 'GameService'];
+GameCtrl.$inject = [];
 
 export default GameCtrl;

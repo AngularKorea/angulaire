@@ -37,7 +37,7 @@ class GameService {
 
 	isCorrect(index) {
 		this.submitted = true;
-		this.correct = this.data[this.current]['answers'][index]['isCorrect'] === 'TRUE';
+		this.correct = this.data[this.current].answers[index].isCorrect === 'TRUE';
 		return this.correct;
 	}
 
