@@ -1,3 +1,6 @@
+#answers {
+	margin-top: 40px;
+}
 .answer {
 	display: block;
 }
@@ -92,11 +95,17 @@
 /* Right / Wrong */
 
 .answer-correct {
-	background-color: green;
+	background-color: #65AD09;
 }
 
 .answer-wrong {
-	background-color: red;
+	background-color: #FF1930;
 }
 
-
+.clearfix:after {
+		content: " "; /* Older browser do not support empty content */
+		visibility: hidden;
+		display: block;
+		height: 0;
+		clear: both;
+}

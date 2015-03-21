@@ -1,12 +1,21 @@
-.navbar-logo {
-	position: absolute;
-	height: 100px;
-	width: 150px;
-	top: 10px;
-	left: 10px;
-	z-index: -1000;
-}
+//.navbar-logo {
+//	position: absolute;
+//	height: 200px;
+//	width: 275px;
+//	top: 10px;
+//	left: 68%;
+//	z-index: -1000;
+//}
 
 .navbar {
-	margin-bottom: 60px;
+	height: 60px;
+	color: white;
+	margin-bottom: 0px;
+}
+
+.navbar-brand {
+	font-weight: 400;
+	font-size: 2em;
+	text-align: center;
+	margin: 0 auto;
 }

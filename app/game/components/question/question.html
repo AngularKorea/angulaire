@@ -1,5 +1,8 @@
-<span>Question #{{vm.Game.current + 1}}</span>
-<div ng-repeat="lang in vm.languages">
-  <h1 class="question">{{vm.Game.currentQuestion[lang]}}</h1>
+<div id="question-box">
+	<h3 class="question-number">Question #{{vm.Game.current + 1}}</h3>
+
+	<div ng-repeat="lang in vm.languages" class="question-list">
+		<h1 class="question">{{vm.Game.currentQuestion[lang]}}</h1>
+	</div>
 </div>
 

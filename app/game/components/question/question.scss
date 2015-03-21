@@ -1,5 +1,19 @@
-.question {
-  float: left;
-  clear: both;
-  border: solid black 3px;
+#question-box {
+	margin: 0 50px;
+	width: 100%;
+
+	.question-number {
+		font-weight: 300;
+	}
+
+	.question-list {
+		font-size: 2em;
+		font-weight: 600;
+	}
+
+	.question {
+		float: left;
+		clear: both;
+	}
 }
+

@@ -1,4 +1,5 @@
 export default ($stateProvider) => {
+	require('./game.scss');
 	$stateProvider
 		.state('game', {
 			url: '/game',

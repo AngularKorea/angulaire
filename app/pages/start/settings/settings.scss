@@ -1,8 +1,52 @@
+/* Select2 theme */
+
+/* Mark invalid Select2 */
+.ng-dirty.ng-invalid > a.select2-choice {
+	border-color: #D44950;
+}
+
+.select2-result-single {
+	padding-left: 0;
+}
+
+.select2-locked > .select2-search-choice-close{
+	display:none;
+}
+
+.select-locked > .ui-select-match-close{
+	display:none;
+}
+
+body > .select2-container.open {
+	z-index: 9999; /* The z-index Select2 applies to the select2-drop */
+}
+
+/* Selectize theme */
+
+/* Helper class to show styles when focus */
+.selectize-input.selectize-focus{
+	border-color: #007FBB !important;
+}
+
+/* Fix input width for Selectize theme */
+.selectize-control > .selectize-input > input {
+	width: 100%;
+}
+
+/* Fix dropdown width for Selectize theme */
+.selectize-control > .selectize-dropdown {
+	width: 100%;
+}
+
+/* Mark invalid Selectize */
+.ng-dirty.ng-invalid > div.selectize-input {
+	border-color: #D44950;
+}
 .select2 > .select2-choice.ui-select-match {
-  /* Because of the inclusion of Bootstrap */
-  height: 29px;
+	/* Because of the inclusion of Bootstrap */
+	height: 29px;
 }
 
 .selectize-control > .selectize-dropdown {
-  top: 36px;
+	top: 36px;
 }

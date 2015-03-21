@@ -1,7 +1,7 @@
 class SettingsCtrl {
-	constructor($state, gameSettings) {
+	constructor($state, SettingsService) {
 		this.$state = $state;
-		this.settings = gameSettings;
+		this.settings = SettingsService;
 		this.language = {};
 		this.languages = [
 			{name: 'English', sub: '영어', code: ['eng']},
@@ -15,6 +15,6 @@ class SettingsCtrl {
 		this.$state.go('game');
 	}
 }
-SettingsCtrl.$inject = ['$state', 'gameSettings'];
+SettingsCtrl.$inject = ['$state', 'SettingsService'];
 
 export default SettingsCtrl;

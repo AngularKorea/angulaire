@@ -7,7 +7,7 @@ export default () => {
 	 *  JS
 	 */
 	//require('imports?$=jquery!bootstrap/bootstrap-sass-official/assets/javascripts/bootstrap.js');
-	require('angular');
+	//require('angular');
 	require('angular-messages');
 	require('angular-animate');
 	require('angular-touch');

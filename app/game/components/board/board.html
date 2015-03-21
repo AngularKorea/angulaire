@@ -1,11 +1,11 @@
-<div>
+<div id="game-board">
   <ul class="game-board-content">
     <li ng-repeat="point in vm.points track by $index"
         class="animation--wayra"
         ng-class="{'animation--wayra-active': vm.Game.current === vm.current($index) - 1,
          'answered-wrong': vm.Game.trackWrong.indexOf($index + 1) !== -1}">
-	    <span>{{vm.current($index)}}</span>
-      <span>{{point}}</span>
+	    <span class="board-count">{{vm.current($index)}}</span>
+      <span class="board-value">{{point}}</span>
     </li>
   </ul>
 </div>

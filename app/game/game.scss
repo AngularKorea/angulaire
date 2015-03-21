@@ -1,20 +1,4 @@
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
-
-.clearfix {
-	display: inline-block;
-}
-
-* html .clearfix {
-	height: 1%;
-}
-
-.clearfix {
-	display: block;
+#game {
+	margin-top: 40px;
+	padding: 40px 20px 0 40px;
 }
