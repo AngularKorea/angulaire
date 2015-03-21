@@ -1,9 +1,11 @@
 <div class="container row">
-  <div ng-repeat="answer in vm.Game.currentAnswers track by $index" class="col-md-6">
-    <button type="button"
-            class="btn btn-primary btn-lg btn-block choice"
-            ng-click="vm.selectAnswer($index)">
-      <span ng-repeat="lang in vm.languages" class="answer">{{answer[lang]}}</span>
-    </button>
-  </div>
+	<div ng-repeat="answer in vm.Game.currentAnswers track by $index" class="col-md-6">
+		<button type="button"
+		        class="btn btn-block button button--ujarak button--size-l button--border-thick button--wide"
+		        ng-class="{'answer-correct': vm.Game.submitted && vm.Game.isSelected($index) && vm.Game.correct,
+                      'answer-wrong': vm.Game.submitted && vm.Game.isSelected($index) && !vm.Game.correct}"
+		        ng-click="vm.selectAnswer($index)">
+			<span ng-repeat="lang in vm.languages" class="answer">{{answer[lang]}}</span>
+		</button>
+	</div>
 </div>

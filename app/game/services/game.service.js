@@ -42,7 +42,6 @@ class GameService {
 	}
 
 	isSubmitted() {
-		console.log(`isSubmitted: ${this.submitted}`);
 		return this.submitted;
 	}
 

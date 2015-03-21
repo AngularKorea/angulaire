@@ -1,14 +1,63 @@
-.game-board-content li {
-  display: block;
-	background-color: darkblue;
-	font-size: 1.5em;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px 10px 30px;
-  height: 40px;
-  border: solid yellow 3px;
-}
+.game-board-content {
+	li {
+		color: #37474f;
+		border-color: #37474f;
+		font-size: 1.5em;
+		display: block;
+		padding: 0.2em 0.2em;
+		border: 3px solid;
+		background: none;
+		letter-spacing: 1px;
+		vertical-align: middle;
+		font-weight: 600;
+		position: relative;
+		z-index: 1;
+		-webkit-backface-visibility: hidden;
+		-moz-osx-font-smoothing: grayscale;
+	}
 
-.game-board-content .highlight {
-	background-color: red;
+	.animation--wayra {
+		overflow: hidden;
+		width: 245px;
+		-webkit-transition: border-color 0.3s, color 0.3s;
+		transition: border-color 0.3s, color 0.3s;
+		-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	}
+	.animation--wayra::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 150%;
+		height: 100%;
+		background: #37474f;
+		z-index: -1;
+		-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+		transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
+		-webkit-transform-origin: 0% 100%;
+		transform-origin: 0% 100%;
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s, background-color 0.3s;
+		transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
+	}
+	.animation--wayra-active {
+		color: #fff;
+		border-color: #3f51b5;
+	}
+	.animation--wayra.animation--inverted-active {
+		color: #3f51b5;
+		border-color: #fff;
+	}
+	.animation--wayra-active::before {
+		opacity: 1;
+		background-color: #3f51b5;
+		-webkit-transform: rotate3d(0, 0, 1, 0deg);
+		transform: rotate3d(0, 0, 1, 0deg);
+		-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	}
+	.animation--wayra.animation--inverted-active::before {
+		background-color: #fff;
+	}
+
 }

@@ -1,7 +1,9 @@
 <div>
   <ul class="game-board-content">
     <li ng-repeat="point in vm.points track by $index"
-        ng-class="{highlight: vm.Game.current === vm.current($index) }">
+        class="animation--wayra"
+        ng-class="{'animation--wayra-active': vm.Game.current === vm.current($index) - 1 }">
+
 	    <span>{{vm.current($index)}}</span>
       <span>{{point}}</span>
     </li>

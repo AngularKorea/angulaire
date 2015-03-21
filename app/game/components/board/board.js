@@ -2,11 +2,11 @@ class BoardCtrl {
 	constructor(GameService, SettingsService) {
 		this.Game = GameService;
 		this.total = SettingsService.rounds;
-		this.points = [];
+		this.points = [ ];
 
 		/* generate game board values. For example 2:  500 */
 		var total = 6000;
-		for (var i = this.total; i >= 0; i--) {
+		for (var i = this.total - 1; i >= 0; i--) {
 			if (total === 500) {
 				total = 0;
 			} else {

@@ -1,6 +1,6 @@
 export default ($stateProvider) => {
 	$stateProvider
-		.state('pages.end', {
+		.state('end', {
 			url: '/end',
 			template: require('./end.html')
 		});
