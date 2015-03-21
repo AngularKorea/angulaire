@@ -15,6 +15,7 @@ class GameService {
 		this.submitted = false;
 		this.currentQuestion = null;
 		this.currentAnswers = null;
+		this.trackWrong = [];
 	}
 
 	load(data) {
@@ -38,6 +39,10 @@ class GameService {
 	isCorrect(index) {
 		this.submitted = true;
 		this.correct = this.data[this.current].answers[index].isCorrect === 'TRUE';
+		if (!this.correct) {
+			console.log('add ' + this.current);
+			this.trackWrong.push(this.rounds - this.current);
+		}
 		return this.correct;
 	}
 

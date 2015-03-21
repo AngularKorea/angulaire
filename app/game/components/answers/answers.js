@@ -1,5 +1,6 @@
 export default () => {
 	require('./answers.scss');
+	require('./animation-stagger.scss');
 	return {
 		scope: {
 			answers: '='
