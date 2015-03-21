@@ -3,9 +3,6 @@ class GameCtrl {
 		this.$state = $state;
 		this.data = gameData;
 		this.Game = GameService;
-		this.current = GameService.current;
-		this.getAnswers = GameService.getAnswers;
-		this.getQuestion = GameService.getQuestion;
 	}
 
 }

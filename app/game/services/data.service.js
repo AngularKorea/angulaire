@@ -40,7 +40,7 @@ class DataService {
 				});
 			}
 			// load game data into GameService
-			this.GameService.load(data);
+			this.GameService.load(this.gameData);
 			// return data for GameCtrl
 			return this.gameData;
 		}, (error) => {

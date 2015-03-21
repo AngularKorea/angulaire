@@ -1,16 +1,14 @@
 class QuestionCtrl {
-	constructor(SettingsService) {
+	constructor(SettingsService, GameService) {
 		this.languages = SettingsService.getLanguage();
+		this.Game = GameService;
 	}
 }
-QuestionCtrl.$inject = ['SettingsService'];
+QuestionCtrl.$inject = ['SettingsService', 'GameService'];
 
 export default () => {
 	require('./question.scss');
 	return {
-		scope: {
-			question: '='
-		},
 		template: require('./question.html'),
 		bindToController: true,
 		controllerAs: 'vm',

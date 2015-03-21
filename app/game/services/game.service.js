@@ -13,18 +13,22 @@ class GameService {
 		this.correct = null;
 		this.current = 0;
 		this.submitted = false;
+		this.currentQuestion = null;
+		this.currentAnswers = null;
 	}
 
 	load(data) {
 		this.data = data;
-	}
-
-	getAnswers() {
-		return this.data[this.current].answers;
+		this.getQuestion();
+		this.getAnswers();
 	}
 
 	getQuestion() {
-		return this.data[this.current].question;
+		this.currentQuestion = this.data[this.current].question;
+	}
+
+	getAnswers() {
+		this.currentAnswers = this.data[this.current].answers;
 	}
 
 	isSelected(index) {
@@ -33,10 +37,7 @@ class GameService {
 
 	isCorrect(index) {
 		this.submitted = true;
-		var options = ['gsx$a', 'gsx$b', 'gsx$c', 'gsx$d']; // google spreadsheets are terrible.
-		this.correct = this.data[this.current][options[index]]['$t'] === 'TRUE';
-		console.log(`submitted: ${this.submitted}`);
-		console.log(`correct: ${this.correct}`);
+		this.correct = this.data[this.current]['answers'][index]['isCorrect'] === 'TRUE';
 		return this.correct;
 	}
 
@@ -56,6 +57,8 @@ class GameService {
 			this.selected = null;
 			this.submitted = false;
 			this.correct = null;
+			this.getQuestion();
+			this.getAnswers();
 		}
 
 	}

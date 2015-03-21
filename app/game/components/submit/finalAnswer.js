@@ -1,7 +1,6 @@
 class FinalAnswerCtrl {
 	constructor(GameService) {
 		this.Game = GameService;
-		//this.next = GameService.nextQuestion;
 	}
 }
 FinalAnswerCtrl.$inject = ['GameService'];
