@@ -3,8 +3,8 @@
 }
 .game-board-content {
 	li {
-		color: #37474f;
-		border-color: #37474f;
+		color: $primary-color;
+		border-color: $primary-color;
 		width: 700px;
 		font-size: 1.5em;
 		display: block;
@@ -32,8 +32,8 @@
 	}
 
 	.answered-wrong {
-		border: 1px solid #37474f;
-		background-color: #FF1930;
+		border: 1px solid $primary-color;
+		background-color: $wrong-color;
 	}
 
 	.animation--wayra {
@@ -51,7 +51,7 @@
 		left: 0;
 		width: 150%;
 		height: 100%;
-		background: #37474f;
+		background: $primary-color;
 		z-index: -1;
 		-webkit-transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
 		transform: rotate3d(0, 0, 1, -45deg) translate3d(0, -3em, 0);
@@ -61,23 +61,23 @@
 		transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
 	}
 	.animation--wayra-active {
-		color: #fff;
-		border-color: #37474f;
+		color: $secondary-color;
+		border-color: $primary-color;
 	}
 	.animation--wayra.animation--inverted-active {
-		color: #37474f;
-		border-color: #fff;
+		color: $primary-color;
+		border-color: $secondary-color;
 	}
 	.animation--wayra-active::before {
 		opacity: 1;
-		background-color: #37474f;
+		background-color: $primary-color;
 		-webkit-transform: rotate3d(0, 0, 1, 0deg);
 		transform: rotate3d(0, 0, 1, 0deg);
 		-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 		transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 	}
 	.animation--wayra.animation--inverted-active::before {
-		background-color: #fff;
+		background-color: $secondary-color;
 	}
 
 }

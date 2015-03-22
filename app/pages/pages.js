@@ -1,4 +1,8 @@
+require('./pages.scss');
+
 export default angular.module('pages', [
-	require('./start/start').name,
+	require('./landing/landing').name,
+	require('./settings/settings').name,
 	require('./end/end').name
-]);
+])
+	.config(require('./pages.route.js'));

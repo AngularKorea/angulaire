@@ -7,7 +7,6 @@ class QuestionCtrl {
 QuestionCtrl.$inject = ['SettingsService', 'GameService'];
 
 export default () => {
-	require('./question.scss');
 	return {
 		template: require('./question.html'),
 		bindToController: true,

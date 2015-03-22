@@ -9,7 +9,7 @@ export default ngModule => {
 
 		$locationProvider.html5Mode(true);
 
-		var devMode = true;
+		var devMode = false;
 		var root = devMode ? '/game' : '/start';
 
 		// set to '/start' for game, '/game' in development

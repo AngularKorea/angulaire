@@ -7,7 +7,7 @@
 
 .button {
 	background-color: inherit;
-	color: inherit;
+	color: $secondary-color;
 	float: left;
 	min-width: 150px;
 	max-width: 450px;
@@ -42,7 +42,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: #37474f;
+	background: $primary-color;
 	z-index: -1;
 	opacity: 0;
 	-webkit-transform: scale3d(0.7, 1, 1);
@@ -58,7 +58,7 @@
 }
 
 .button--ujarak.button--inverted::before {
-	background: #7986CB;
+	background: $primary-color;
 }
 
 .button--ujarak,
@@ -68,13 +68,13 @@
 }
 
 .button--ujarak:hover {
-	color: #fff;
-	border-color: #37474f;
+	color: $secondary-color;
+	border-color: $primary-color;
 }
 
 .button--ujarak.button--inverted:hover {
-	color: #37474F;
-	border-color: #fff;
+	color: $primary-color;
+	border-color: $secondary-color;
 }
 
 .button--ujarak:hover::before {
@@ -95,17 +95,9 @@
 /* Right / Wrong */
 
 .answer-correct {
-	background-color: #65AD09;
+	background-color: $correct-color;
 }
 
 .answer-wrong {
-	background-color: #FF1930;
-}
-
-.clearfix:after {
-		content: " "; /* Older browser do not support empty content */
-		visibility: hidden;
-		display: block;
-		height: 0;
-		clear: both;
+	background-color: $wrong-color;
 }

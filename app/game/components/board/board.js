@@ -22,7 +22,6 @@ class BoardCtrl {
 BoardCtrl.$inject = ['GameService', 'SettingsService'];
 
 export default () => {
-	require('./board.scss');
 	return {
 		scope: true,
 		template: require('./board.html'),

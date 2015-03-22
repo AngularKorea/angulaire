@@ -1,2 +1,2 @@
 export default angular.module('pages.end', [])
-	.config(require('./end.route'));
+	.config(require('./end.route.js'));

@@ -1,3 +1,22 @@
+$primary-color: #007AC3;
+$secondary-color: #DED0F2;
+$correct-color: #0E8A1B;
+$wrong-color: #901F00;
+
+@import './components/answers/answers.scss';
+@import './components/answers/animation.scss';
+@import './components/board/board.scss';
+@import './components/question/question.scss';
+@import './components/submit/finalAnswer.scss';
+
+body {
+	background-image: url('../core/assets/images/footer_lodyas.png');
+	background-repeat: repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 #game {
 	margin-top: 40px;
 	padding: 40px 20px 0 40px;

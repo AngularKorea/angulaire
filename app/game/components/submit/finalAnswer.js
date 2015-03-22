@@ -6,7 +6,6 @@ class FinalAnswerCtrl {
 FinalAnswerCtrl.$inject = ['GameService'];
 
 export default () => {
-	require('./finalAnswer.scss');
 	return {
 		scope: {},
 		bindToController: true,

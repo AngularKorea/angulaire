@@ -1,6 +1,6 @@
 export default ($stateProvider) => {
 	$stateProvider
-		.state('start.landing', {
+		.state('pages.landing', {
 			url: '/start',
 			template: require('./landing.html')
 		});

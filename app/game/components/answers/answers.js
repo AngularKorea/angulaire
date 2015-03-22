@@ -1,6 +1,4 @@
 export default () => {
-	require('./answers.scss');
-	require('./animation.scss');
 	return {
 		scope: {
 			answers: '='

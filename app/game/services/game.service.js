@@ -40,7 +40,6 @@ class GameService {
 		this.submitted = true;
 		this.correct = this.data[this.current].answers[index].isCorrect === 'TRUE';
 		if (!this.correct) {
-			console.log('add ' + this.current);
 			this.trackWrong.push(this.rounds - this.current);
 		}
 		return this.correct;
@@ -53,7 +52,7 @@ class GameService {
 	nextQuestion() {
 		// check if finished
 		if (this.current === this.rounds - 1) {
-			this.$state.go('end');
+			this.$state.go('pages.end');
 		} else {
 			// next
 			this.current += 1;
