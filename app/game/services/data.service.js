@@ -1,5 +1,5 @@
 const DEVMODE = false;
-const spreadsheet = '1fOaLreeBZyIk0X3q22eJkL4ZKGIp0SyyJkwaI750CkY';
+const spreadsheet = '14er8YvAHiORyiB0oZsSJdXZIMnW5_OpGK0o97lcwvIc';
 
 ///* for DEVMODE without an internet connection */
 //var fakeData = {
