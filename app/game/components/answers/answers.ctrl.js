@@ -1,6 +1,7 @@
 class AnswersCtrl {
 	constructor(SettingsService, GameService) {
 		this.languages = SettingsService.getLanguage();
+		this.letters = ['A', 'B', 'C', 'D'];
 		this.Game = GameService;
 		this.selectAnswer = (index) => {
 			GameService.selected = index;

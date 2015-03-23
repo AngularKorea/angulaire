@@ -6,7 +6,10 @@
 			        ng-class="{'answer-correct': vm.Game.isSelected($index) && vm.Game.correct,
                       'answer-wrong': vm.Game.isSelected($index) && !vm.Game.correct}"
 			        ng-click="vm.selectAnswer($index)">
-				<span ng-repeat="lang in vm.languages" class="answer slide">{{answer[lang]}}</span>
+				<span class="answer-letter">{{::vm.letters[$index]}}.&nbsp;</span>
+				<span ng-repeat="lang in vm.languages track by $index" class="answer slide">
+					<span ng-if="$index === 0 || answer[vm.languages[0]] !== answer[lang]">{{answer[lang]}}</span>
+				</span>
 			</button>
 	</div>
 </div>

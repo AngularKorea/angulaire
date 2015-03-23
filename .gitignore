@@ -1,6 +1,7 @@
 node_modules
 app/bower_components
 dist
+spreadsheets.js
 
 npm-debug.log
 
